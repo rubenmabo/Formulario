@@ -1,23 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-</head>
-<body>
-<form>
+
+<form name='comentariorelleno' method="GET">
     Tema <br>
-    <input type="text" name="Tema"> <br>
+    <textarea name="Tema" rows="1" cols="50"><?php echo $_REQUEST['Tema']; ?></textarea> <br>
     Comentario: <br>
-    <textarea name="textarea" rows="10" cols="50"><?php $_REQUEST ?></textarea> 
+    <textarea name="comentario" rows="10" cols="50" maxlength="300"><?php echo $_REQUEST['comentario']; ?></textarea> 
     
     <br><br>
     
-      <button name="boton" value="Detalle">Detalle</button>&nbsp;
-      <button name="boton" value="Nueva Opinion">Nueva Opinion</button>&nbsp;
-      <button name="boton" value="Terminar">Terminar</button>&nbsp;
+    <input type="submit" name="boton" value="Detalle"> &nbsp;
+	<input type="submit" name="boton" value="Nueva Opinion"> &nbsp;
+	<input type="submit" name="boton" value="Terminar"> &nbsp;
     
 </form>
-</body>
-</html>
-
-<?php ?>
