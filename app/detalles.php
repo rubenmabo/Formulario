@@ -22,7 +22,7 @@ function pRepetida ($comentario){
     $p = null;
     $repetido = null;
     for($i=0 ; $i<strlen($comentario) ; $i++){
-        if($comentario[$i] != ' ' && $comentario[$i] != ','){
+        if($comentario[$i] != ' '){
             $p = $p.$comentario[$i];
         }else{
             if(substr_count($comentario, $p) > $max){
